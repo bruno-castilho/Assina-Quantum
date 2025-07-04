@@ -1,0 +1,12 @@
+FROM python:3.10
+
+
+RUN pip install --no-cache-dir cffi
+RUN pip install --no-cache-dir pqcrypto
+
+
+COPY ./ /home/app
+WORKDIR /home/app
+
+
+ENTRYPOINT ["python"]
